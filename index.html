@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <header>
+      <nav id="navbar">
+        <a href="index.html"><p>Home</p></a>
+        <ul class="nav-list">
+          <li class="Work"><a href="#Competences">Competence</a></li>
+          <li class="Work"><a href="#Work">Projet</a></li>
+          <li class="Contact"><a href="#Contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="container">
+      <section id="introduction">
+        <h1 class="title-introduction">Gaddiel Mbengi</h1>
+        <p class="text-introduction">Web developer front-end junior</p>
+      </section>
+      <section id="about">
+        <h2 class="about-title">Qui suis-je ?</h2>
+        <article class="about-me">
+          <p>Mbengi Gaddiel, un passionné du web âgé de 27 ans.</p>
+          <p>
+            Diplômé en tant qu'intégrateur web chez OpenClassrooms, je maîtrise
+            HTML, CSS et JavaScript pour créer des interfaces dynamiques et
+            esthétiques.
+          </p>
+          <p>
+            Fort de mon expertise, je suis prêt à relever de nouveaux défis dans
+            le domaine de l'intégration web, en apportant ma créativité et mes
+            compétences techniques.
+          </p>
+        </article>
+      </section>
+      <section id="Competences">
+        <h2>Mes competences</h2>
+        <div class="container-competence">
+          <h3 class="title-competence">Langages de programmation</h3>
+          <ul div class="competence-lang">
+            <li>
+              <img src="img/html.webp" alt="logo-html" />
+              <span>HTML</span>
+            </li>
+            <li>
+              <img src="img/css.webp" alt="logo-css" />
+              <span>CSS</span>
+            </li>
+            <li>
+              <img src="img/JavaScript.webp" alt="logo-JS" />
+              <span>JavaScript</span>
+            </li>
+          </ul>
+          <h3>Frameworks et bibliothèques JavaScript</h3>
+          <ul div class="competence-frame">
+            <li>
+              <img src="img/react.webp" alt="logo-react" />
+              <span>REACT</span>
+            </li>
+            <li>
+              <img src="img/redux.webp" alt="logo-redux" />
+              <span>REDUX</span>
+            </li>
+          </ul>
+          <h3>Technologies back-end</h3>
+          <ul div class="competence-back">
+            <li>
+              <img src="img/Node.js.webp" alt="logo-nodejs" />
+              <span>NODE.JS</span>
+            </li>
+            <li>
+              <img src="img/mongodb.webp" alt="logo-mango" />
+              <span>MONGODB</span>
+            </li>
+          </ul>
+          <h3>Préprocesseur CSS</h3>
+          <ul div class="competence-prepro">
+            <li>
+              <img src="img/sass.webp" alt="logo-sass" />
+              <span>SASS</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="Work">
+        <h2 class="title-work">Mes projets</h2>
+        <div class="container-work">
+          <a href="/openclassrooms.html" class="projet">
+            <img src="/img/OC.webp" alt="img-openclassrooms" />
+            <p>Openclassrooms</p>
+          </a>
+          <a href="#" target="_blank" class="projet">
+            <img src="/img/Solo.webp" alt="img-solo" />
+            <p>MyProjet</p>
+          </a>
+        </div>
+      </section>
+      <section id="Contact">
+        <div class="contact-intro">
+          <h2>Contact</h2>
+          <p>
+            Si vous souhaitez me contacter, veuillez remplir le formulaire
+            ci-dessous.
+          </p>
+        </div>
+        <div class="container-contact">
+          <div class="title-contact">
+            <h3>Let's work together...</h3>
+            <h4>How do you take your coffee?</h4>
+          </div>
+          <form method="post" action="#">
+            <input
+              type="text"
+              name="name"
+              placeholder="Votre nom"
+              required=""
+            />
+
+            <input
+              type="text"
+              name="email"
+              placeholder="Votre adresse mail"
+              required=""
+            />
+
+            <textarea
+              name="message"
+              placeholder="Enter your message"
+            ></textarea>
+            <button type="submit">Envoyer</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container-reseaux">
+        <ul class="reseaux-list">
+          <li class="reseaux"><i class="fa-brands fa-linkedin"></i>LinKedIn</li>
+          <li class="reseaux"><i class="fa-brands fa-github"></i>Github</li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

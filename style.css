@@ -1,0 +1,410 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+:root {
+  --main-white: #e5e7eb;
+  --main-Blue: #2d3142;
+  --main-orange: #e67544;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/**** HEADER ****/
+
+header {
+  width: 100%;
+}
+
+#navbar {
+  background-color: var(--main-Blue);
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+#navbar p {
+  padding: 2rem;
+  font-size: 1.5rem;
+  color: white;
+}
+
+#navbar p:hover {
+  color: var(--main-orange);
+}
+
+.nav-list {
+  display: flex;
+}
+
+.nav-list a {
+  color: #f0f0f0;
+  font-size: 1.5rem;
+}
+
+.nav-list li a:hover {
+  color: var(--main-orange);
+}
+
+.nav-list li {
+  padding: 2rem;
+}
+
+/*** Container ***/
+
+#container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+}
+
+/*** introduction ***/
+
+#introduction {
+  background-color: var(--main-Blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  color: var(--main-white);
+  padding: 8rem;
+}
+
+.title-introduction {
+  font-size: 5.5rem;
+  font-weight: 700;
+}
+
+.text-introduction {
+  color: white;
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+/*** About ***/
+
+#about {
+  background-color: var(--main-white);
+  padding: 5rem;
+}
+
+.about-title {
+  color: var(--main-orange);
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.about-me {
+  padding: 2rem 20rem;
+}
+
+.about-me p {
+  margin: 20px;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+/*** Competence ***/
+
+#Competences {
+  margin: 0 auto;
+}
+
+#Competences h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 2rem;
+  color: var(--main-orange);
+}
+
+#Competences h3 {
+  border-bottom: 2px solid var(--main-orange);
+  display: inline-block;
+}
+
+.container-competence {
+  padding: 2rem;
+}
+
+.container-competence ul {
+  display: flex;
+  gap: 30px;
+  padding: 2rem;
+}
+
+.container-competence li {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 25px rgba(45, 49, 66, 0.15);
+  padding: 1rem;
+  background-color: var(--main-white);
+  border-radius: 7px;
+  width: 200px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.container-competence li:hover {
+  transform: translateY(-5px);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
+}
+
+.container-competence img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+/*** WORK ****/
+
+#Work {
+  background-color: var(--main-white);
+  padding: 3rem;
+}
+
+.title-work {
+  text-align: center;
+  color: var(--main-orange);
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+
+.container-work {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  gap: 20px;
+  max-width: 1440px;
+  width: 100%;
+}
+
+.container-work img {
+  width: 450px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.container-work p {
+  color: var(--main-white);
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.projet {
+  background: var(--main-Blue);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+}
+
+.container-work a {
+  transition: 0.3s;
+}
+
+.container-work a:hover {
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
+  transform: translateY(-10px);
+}
+
+/**** Contact ****/
+
+section#Contact {
+  background-color: var(--main-gray);
+  padding: 3rem;
+}
+
+section#Contact .container-contact {
+  /* j'applique du style dans mon container de contact */
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  /* je fais un flex direction pour ma div et le formulaire  */
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--main-white);
+  padding: 30px 10px;
+  border-radius: 15px;
+  /* je fais un box sizing pour eviter que le padding pousse la box sur les coté  */
+  box-sizing: border-box;
+}
+
+section#Contact .container-contact .title-contact {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+section#Contact .container-contact .title-contact h3 {
+  font-size: 2rem;
+}
+
+section#Contact .container-contact-contact .title h4 {
+  font-size: 1.5rem;
+}
+
+section#Contact .container-contact form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 600px;
+}
+
+section#Contact .container-contact form input {
+  width: 45%;
+}
+
+section#Contact .container-contact form input,
+section#Contact .container-contact form textarea {
+  margin: 15px 0;
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+}
+
+section#Contact .container-contact form textarea {
+  width: 100%;
+  resize: none;
+  height: 100px;
+  margin-bottom: 60px;
+}
+
+section#Contact .container-contact form button {
+  width: 192px;
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+  outline: none;
+  font-size: 1.2rem;
+  background-color: var(--main-Blue);
+  color: white;
+  margin: 0 auto;
+}
+
+.contact-intro {
+  text-align: center;
+}
+
+.contact-intro h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: var(--main-orange);
+}
+
+.contact-intro p {
+  margin-bottom: 30px;
+  margin: 20px;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+/**** Footer ***/
+
+footer {
+  background-color: var(--main-Blue);
+  width: 100%;
+  padding: 5rem;
+}
+
+#container {
+  flex: 1;
+}
+
+footer .container-reseaux {
+  color: var(--main-gray);
+  display: flex;
+  flex-direction: column;
+}
+
+footer .reseaux-list {
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+}
+
+footer .reseaux-list li {
+  padding: 1rem;
+  background-color: var(--main-white);
+  border-radius: 7px;
+  width: 200px;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+footer .reseaux-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
+}
+
+.fa-brands {
+  padding: 5px;
+}
+
+/****  Media Querie ****/
+
+@media (max-width: 1024px) {
+  .about-me {
+    padding: 0;
+  }
+
+  section#Competences {
+    margin: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-me {
+    padding: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-me {
+    padding: 0;
+  }
+
+  section#Competences {
+    margin: 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .about-me {
+    padding: 0;
+  }
+
+  section#Competences {
+    margin: 0;
+  }
+}
