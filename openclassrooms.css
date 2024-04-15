@@ -13,7 +13,7 @@
   --main-white: #e5e7eb;
   --main-Blue: #2d3142;
   --main-orange: #e67544;
-  --main-red: #cc0000;
+  --main-red: #dc3545;
 }
 
 body {
@@ -48,6 +48,7 @@ header {
 
 #navbar p:hover {
   color: var(--main-orange);
+  transition: 0.5s;
 }
 
 .nav-list {
@@ -61,6 +62,7 @@ header {
 
 .nav-list li a:hover {
   color: var(--main-orange);
+  transition: 0.5s;
 }
 
 .nav-list li {
