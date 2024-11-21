@@ -1,0 +1,145 @@
+header {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: url(/assets/img/Dev.jpg) fixed center/cover;
+
+  .header-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+
+    h1 {
+      font-size: 4.5rem;
+      color: $red;
+
+      @media (max-width: 768px) {
+        font-size: 3rem;
+      }
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      color: $white;
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
+    }
+
+    p {
+      font-size: 1.5rem;
+      color: $white;
+      @media (max-width: 768px) {
+        font-size: 1.2rem;
+      }
+    }
+
+    #target {
+      display: flex;
+      position: relative;
+    }
+    #target::after {
+      content: "";
+      height: 3rem;
+      width: 5px;
+      background: $white;
+      top: 0;
+      transform: translateY(-4px);
+      animation: anim 1s linear infinite;
+    }
+    @keyframes anim {
+      50% {
+        opacity: 0.1;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    @media (max-width: 768px) {
+      left: 40%;
+    }
+  }
+
+  .social-links {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .social-links a {
+    color: $white;
+    font-size: 2.5rem;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    padding: 20px 50px;
+    background-color: $black;
+    top: -80px;
+    z-index: 1;
+    transition: 1s;
+
+    .hamburger-menu {
+      display: none;
+      cursor: pointer;
+      font-size: 2rem;
+      color: $white;
+    }
+
+    a {
+      color: $white;
+      transition: 0.8s;
+      &:hover {
+        color: $red;
+      }
+    }
+
+    #nav-links {
+      display: flex;
+      justify-content: flex-end;
+      width: 50%;
+
+      li {
+        padding: 10px;
+        cursor: pointer;
+      }
+
+      &.active {
+        display: flex;
+      }
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      padding: 15px;
+
+      .hamburger-menu {
+        display: block;
+      }
+
+      #nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+
+        li {
+          padding: 15px 0;
+        }
+
+        &.active {
+          display: flex;
+        }
+      }
+    }
+  }
+}

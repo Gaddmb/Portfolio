@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/styles/index.css" />
+  </head>
+  <body>
+    <header id="reset">
+      <nav>
+        <div class="hamburger-menu" id="hamburger-menu">
+          <i class="fas fa-bars"></i>
+        </div>
+        <span class="link"><a href="#reset">Gaddiel Mbengi</a></span>
+        <ul id="nav-links">
+          <li><a href="#about" class="link">À Propos</a></li>
+          <li><a href="#project" class="link">Projets</a></li>
+          <li><a href="#contact" class="link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-text">
+        <div>
+          <p>Hi, I'm</p>
+          <h1>Gaddiel Mbengi</h1>
+          <h2 id="target"></h2>
+          <div class="social-links">
+            <a href="https://github.com/Gaddmb" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/tonprofil" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="about-section" id="about">
+        <article class="about-description">
+          <h3>À propos</h3>
+          <p>
+            Développeur junior diplômé d’OpenClassrooms, je suis passionné par
+            le web et prêt à relever de nouveaux défis. Avec des compétences en
+            HTML, CSS, JavaScript, React, Redux, Node.js, et MongoDB, j’aspire à
+            appliquer ces technologies sur des projets concrets. Curieux et
+            motivé, je cherche sans cesse à enrichir mes compétences pour créer
+            des expériences web modernes et dynamiques.
+          </p>
+        </article>
+        <div class="skills-section">
+          <h3>Mes compétences</h3>
+          <div id="skills-gallery" class="image-gallery"></div>
+        </div>
+      </section>
+
+      <section class="container" id="project">
+        <h3>Mes Projets</h3>
+        <div class="tabs">
+          <button
+            class="tab-button"
+            data-filter="all"
+            aria-label="Tous les projets"
+          >
+            Tous
+          </button>
+          <button
+            class="tab-button"
+            data-filter="OpenClassroom"
+            aria-label="Projets OpenClassroom"
+          >
+            OpenClassroom
+          </button>
+          <button
+            class="tab-button"
+            data-filter="MyProject"
+            aria-label="Mes projets"
+          >
+            Mes Projets
+          </button>
+        </div>
+        <div id="container-img" class="image-gallery"></div>
+      </section>
+    </main>
+    <div class="pop-up" id="popup">
+      <div class="pop-up-container">
+        <p>
+          N'hésitez pas à cliquer sur le lien ci-dessous pour découvrir
+          davantage de projets que j'ai réalisés. Vous pourrez explorer mon
+          portfolio complet sur GitHub en cliquant sur le lien suivant :
+          <a href="https://github.com/Gaddmb?tab=repositories" target="_blank">
+            Mon GitHub
+          </a>
+        </p>
+        <i class="fas fa-times-circle" id="closeBtn"></i>
+      </div>
+    </div>
+
+    <footer id="contact">
+      <div class="container-footer">
+        <h3>Contactez-moi !</h3>
+        <form class="contact-form" action="#" method="post">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="last-name">Nom</label>
+              <input type="text" id="last-name" name="last-name" required />
+            </div>
+            <div class="form-group">
+              <label for="first-name">Prénom</label>
+              <input type="text" id="first-name" name="first-name" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit">Envoyer</button>
+        </form>
+
+        <div class="contact-info">
+          <p>
+            <span role="img" aria-label="Email">📧</span> Email:
+            <a href="mailto:gaddielmb@gmail.com">gaddielmb@gmail.com</a>
+          </p>
+          <p>
+            <span role="img" aria-label="Phone">📞</span> Téléphone:
+            <a href="tel:+33695565264">06 95 56 52 64</a>
+          </p>
+          <p><span role="img" aria-label="Location">📍</span> Lieu: Paris</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./assets/Js/index.js"></script>
+  </body>
+</html>
