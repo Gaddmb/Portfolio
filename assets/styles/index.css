@@ -149,7 +149,7 @@ header nav {
   position: fixed;
   width: 100%;
   padding: 20px 50px;
-  background-color: #16161d;
+  background-color: #1a1a1a;
   top: -80px;
   z-index: 1;
   -webkit-transition: 1s;
@@ -167,7 +167,7 @@ header nav a {
   transition: 0.8s;
 }
 header nav a:hover {
-  color: #ff3740;
+  color: #3498db;
 }
 header nav #nav-links {
   display: -webkit-box;
@@ -220,7 +220,7 @@ header nav #nav-links.active {
 main {
   width: 80%;
   margin: 0 auto;
-  color: #16161d;
+  color: #1a1a1a;
 }
 main .about-section {
   display: grid;
@@ -428,7 +428,7 @@ main .container .overlay a:hover {
 }
 
 footer {
-  background-color: #16161d;
+  background-color: #1a1a1a;
   color: white;
   padding: 40px 20px;
   text-align: center;

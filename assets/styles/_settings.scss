@@ -9,8 +9,9 @@ $cream: #eee;
 $grey: #ccc;
 $darkgrey: #444;
 $red: #ff3740;
-$black: #16161d;
-$bleu: #2c3e50;
+$black: #1a1a1a;
+$bleuDark: #2c3e50;
+$bleu: #3498db;
 
 *,
 ::before,
@@ -39,5 +40,5 @@ p {
 h3 {
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: $bleu;
+  color: $bleuDark;
 }
