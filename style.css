@@ -102,6 +102,7 @@ nav ul li a:hover:after {
   font-size: 24px;
   cursor: pointer;
 }
+
 #header-text {
   margin-top: 20%;
   font-size: 20px;
@@ -120,30 +121,6 @@ nav ul li a:hover:after {
   font-size: 35px;
   margin-top: 0;
   line-height: 1.2;
-}
-
-#target {
-  margin-left: 1rem;
-  color: var(--accent);
-}
-
-#target::after {
-  content: "";
-  height: 3rem;
-  width: 5px;
-  background: var(--accent);
-  animation: anim 0.8s linear infinite;
-  margin-left: 5px;
-}
-
-@keyframes anim {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
 }
 
 /** ------------- About ------------ */

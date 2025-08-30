@@ -1,8 +1,6 @@
 const tablinks = document.querySelectorAll(".tab-links");
 const tabcontents = document.querySelectorAll(".tab-contents");
 const menuToggle = document.querySelector(".menu-toggle");
-const navUl = document.querySelector("nav ul");
-const target = document.getElementById("target");
 
 //-----tabs------
 
@@ -29,36 +27,22 @@ menuToggle.addEventListener("click", () => {
 
 //-----animation text------
 
-let array = ["Développeur", "Front-end", "Backend"];
-let wordIndex = 0;
-let letterIndex = 0;
+const target = document.getElementById("target");
+const text = "Développeur Junior Fullstack";
+target.style.color = "#ff006e";
+let idx = 1;
+let speed = 150; // ajustable en ms
 
-const createLetter = () => {
-  const letter = document.createElement("span");
-  target.appendChild(letter);
-  letter.textContent = array[wordIndex][letterIndex];
-};
+function writeText() {
+  target.innerText = text.slice(0, idx);
 
-const loop = () => {
-  if (wordIndex >= array.length) {
-    wordIndex = 0;
+  idx++;
+
+  if (idx > text.length) {
+    idx = 1; // boucle infinie
   }
 
-  const showWord = () => {
-    if (letterIndex >= array[wordIndex].length) {
-      letterIndex = 0;
-      wordIndex++;
-      setTimeout(() => {
-        target.innerHTML = "";
-        loop();
-      }, 2800);
-      return;
-    }
-    createLetter();
-    letterIndex++;
-    setTimeout(showWord, 60);
-  };
-  showWord();
-};
+  setTimeout(writeText, speed);
+}
 
-loop();
+writeText();
