@@ -2,6 +2,8 @@ const tablinks = document.querySelectorAll(".tab-links");
 const tabcontents = document.querySelectorAll(".tab-contents");
 const menuToggle = document.querySelector(".menu-toggle");
 
+console.log(menuToggle);
+
 //-----tabs------
 
 tablinks.forEach((link) => {
