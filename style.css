@@ -123,8 +123,7 @@ nav ul li a:hover:after {
   line-height: 1.2;
 }
 
-/** ------------- About ------------ */
-
+/* ----------------- À propos ----------------- */
 #about {
   padding: 60px 0;
   color: var(--text-secondary);
@@ -159,6 +158,7 @@ nav ul li a:hover:after {
   text-align: center;
 }
 
+/* ----------------- Tabs ----------------- */
 .tab-titles {
   display: flex;
   flex-wrap: wrap;
@@ -174,9 +174,10 @@ nav ul li a:hover:after {
   position: relative;
   padding: 10px;
   color: var(--text-main);
+  transition: color 0.3s;
 }
 
-.tab-links:after {
+.tab-links::after {
   content: "";
   width: 0;
   height: 3px;
@@ -185,30 +186,44 @@ nav ul li a:hover:after {
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
-  transition: 0.5s;
+  transition: width 0.5s;
 }
 
 .tab-links.active-link::after {
   width: 80%;
 }
 
-.tab-contents ul li {
+.tab-links:hover {
+  color: var(--accent);
+}
+
+.tab-contents-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tab-contents {
+  display: none; /* le JS affichera le tab actif */
+  padding: 15px;
+  background-color: var(--secondary-bg);
+  border-radius: 10px;
+  color: var(--text-secondary);
+  transition: opacity 0.3s;
+}
+
+.tab-contents ul {
   list-style: none;
-  margin: 15px 0;
+  padding-left: 0;
+}
+
+.tab-contents ul li {
+  margin: 10px 0;
   font-size: 14px;
 }
 
 .tab-contents ul li span {
   color: var(--accent);
   font-size: 12px;
-}
-
-.tab-contents {
-  display: none;
-}
-
-.tab-contents.active-tab {
-  display: block;
 }
 
 /** ------------- Services ------------ */

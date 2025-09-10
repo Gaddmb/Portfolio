@@ -132,34 +132,42 @@ const tabsData = [
   },
 ];
 
-const tabTitlesContainer = document.querySelector(".tab-titles");
-const tabContentsContainer = document.querySelector(".tab-contents-container");
+// Création containers dynamiques
+const container = document.querySelector(".about-col-2");
+const tabTitlesContainer = document.createElement("div");
+tabTitlesContainer.classList.add("tab-titles");
+const tabContentsContainer = document.createElement("div");
+tabContentsContainer.classList.add("tab-contents-container");
+container.appendChild(tabTitlesContainer);
+container.appendChild(tabContentsContainer);
 
+// Génération des tabs
 tabsData.forEach((tab, idx) => {
-  const p = document.createElement("p");
-  p.classList.add("tab-links");
-  if (idx === 0) p.classList.add("active-link");
-  p.dataset.tab = `tab-${idx}`;
-  p.innerText = tab.title;
-  tabTitlesContainer.appendChild(p);
+  const title = document.createElement("p");
+  title.classList.add("tab-links");
+  if (idx === 0) {
+    title.classList.add("active-link");
+    title.innerText = tab.title;
+    tabTitlesContainer.appendChild(title);
+  }
 
-  const div = document.createElement("div");
-  div.classList.add("tab-contents");
-  if (idx === 0) div.classList.add("active-tab");
-  div.id = `tab-${idx}`;
-  div.innerHTML = tab.content;
-  tabContentsContainer.appendChild(div);
-});
+  const content = document.createElement("div");
+  content.classList.add("tab-contents");
+  if (idx === 0) {
+    content.style.display = "block";
+    content.innerHTML = tab.content;
+    tabContentsContainer.appendChild(content);
+  }
 
-// Tabs click
-const tablinks = document.querySelectorAll(".tab-links");
-const tabcontents = document.querySelectorAll(".tab-contents");
-tablinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    const tabname = link.dataset.tab;
-    tablinks.forEach((l) => l.classList.remove("active-link"));
-    tabcontents.forEach((c) => c.classList.remove("active-tab"));
-    link.classList.add("active-link");
-    document.getElementById(tabname).classList.add("active-tab");
+  // Click event
+  title.addEventListener("click", () => {
+    document
+      .querySelectorAll(".tab-links")
+      .forEach((t) => t.classList.remove("active-link"));
+    document
+      .querySelectorAll(".tab-contents")
+      .forEach((c) => (c.style.display = "none"));
+    title.classList.add("active-link");
+    content.style.display = "block";
   });
 });
