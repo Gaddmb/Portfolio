@@ -203,7 +203,6 @@ nav ul li a:hover:after {
 }
 
 .tab-contents {
-  display: none; /* le JS affichera le tab actif */
   padding: 15px;
   background-color: var(--secondary-bg);
   border-radius: 10px;

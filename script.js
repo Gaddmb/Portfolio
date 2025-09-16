@@ -132,6 +132,8 @@ const tabsData = [
   },
 ];
 
+console.log(tabsData);
+
 // Création containers dynamiques
 const container = document.querySelector(".about-col-2");
 const tabTitlesContainer = document.createElement("div");
@@ -145,19 +147,15 @@ container.appendChild(tabContentsContainer);
 tabsData.forEach((tab, idx) => {
   const title = document.createElement("p");
   title.classList.add("tab-links");
-  if (idx === 0) {
-    title.classList.add("active-link");
-    title.innerText = tab.title;
-    tabTitlesContainer.appendChild(title);
-  }
+  if (idx === 0) title.classList.add("active-link");
+  title.innerText = tab.title;
+  tabTitlesContainer.appendChild(title);
 
   const content = document.createElement("div");
   content.classList.add("tab-contents");
-  if (idx === 0) {
-    content.style.display = "block";
-    content.innerHTML = tab.content;
-    tabContentsContainer.appendChild(content);
-  }
+  if (idx === 0) content.style.display = "block";
+  content.innerHTML = tab.content;
+  tabContentsContainer.appendChild(content);
 
   // Click event
   title.addEventListener("click", () => {
