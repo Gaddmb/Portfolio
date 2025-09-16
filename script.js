@@ -79,6 +79,7 @@ portfolioData.forEach((item) => {
 });
 
 // Services dynamiques
+
 const servicesData = [
   {
     icon: "fa-code",
