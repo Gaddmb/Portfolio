@@ -1,6 +1,6 @@
 const menuItems = [
-  { href: "#home", label: "Accueil" },
-  { href: "#about", label: "À propos" },
+  { href: "#home", label: "Home" },
+  { href: "#about", label: "About" },
   { href: "#services", label: "Services" },
   { href: "#portfolio", label: "Portfolio" },
   { href: "#contact", label: "Contact" },
@@ -18,12 +18,9 @@ menuToggle.addEventListener("click", () => {
   navUl.classList.toggle("show");
 });
 
-// Typewriter dynamique
+// Dynamic Typewriter
 const target = document.getElementById("target");
-const texts = [
-  "Développeur web Junior",
-  "Passionné par le Front-end & le Back-end",
-];
+const texts = ["Junior Web Developer", "Passionate about Front-end & Back-end"];
 let textIndex = 0,
   charIndex = 0,
   speed = 100;
@@ -42,24 +39,24 @@ function typeWriter() {
 }
 typeWriter();
 
-// Portfolio dynamique
+// Dynamic Portfolio
 const portfolioData = [
   {
     img: "img/openclass.webp",
-    title: "Projets OpenClassrooms",
-    desc: "Une collection de tous les projets réalisés pendant ma formation OpenClassrooms.",
+    title: "OpenClassrooms Projects",
+    desc: "A collection of all projects completed during my OpenClassrooms training.",
     link: "https://github.com/Gaddmb/Openclassrooms",
   },
   {
     img: "img/Evo.jpg",
-    title: "Projets FromScratch",
-    desc: "Projets réalisés de manière autonome après ma formation pour renforcer mes compétences.",
+    title: "FromScratch Projects",
+    desc: "Projects completed independently after my training to strengthen my skills.",
     link: "https://github.com/Gaddmb/FromScratch",
   },
   {
     img: "img/Astro.webp",
-    title: "Projets actuels",
-    desc: "Projets autodidactes plus complexes que je développe actuellement.",
+    title: "Current Projects",
+    desc: "More complex self-taught projects that I am currently developing.",
     link: "https://github.com/Gaddmb/Current-projet-HTML-CSS-and-JS",
   },
 ];
@@ -72,29 +69,29 @@ portfolioData.forEach((item) => {
     <div class="card-content">
       <h3>${item.title}</h3>
       <p>${item.desc}</p>
-      <a href="${item.link}" target="_blank" class="btn">Voir plus</a>
+      <a href="${item.link}" target="_blank" class="btn">See more</a>
     </div>
   `;
   workList.appendChild(card);
 });
 
-// Services dynamiques
+// Dynamic Services
 
 const servicesData = [
   {
     icon: "fa-code",
-    title: "Développement Front-end",
-    desc: "Interfaces modernes et responsives avec React, Next.js, TypeScript, JS, HTML, CSS.",
+    title: "Front-end Development",
+    desc: "Modern and responsive interfaces with React, Next.js, TypeScript, JS, HTML, CSS.",
   },
   {
     icon: "fa-server",
-    title: "Développement Back-end",
-    desc: "APIs, Auth, Bases de données, sécurité avec Node.js & Express.",
+    title: "Back-end Development",
+    desc: "APIs, Auth, Databases, security with Node.js & Express.",
   },
   {
     icon: "fa-mobile-screen",
-    title: "Développement Full-Stack",
-    desc: "Intégration front + back pour des applications complètes et performantes.",
+    title: "Full-Stack Development",
+    desc: "Front + back integration for complete and performant applications.",
   },
 ];
 const servicesList = document.querySelector(".services-list");
@@ -104,38 +101,38 @@ servicesData.forEach((s) => {
   servicesList.appendChild(div);
 });
 
-// Tabs dynamique About
+// Dynamic About Tabs
 const tabsData = [
   {
-    title: "Compétences",
+    title: "Skills",
     content: `
       <ul>
         <li><span>Front-end:</span> React.js, Next.js, TypeScript, JS, HTML, CSS</li>
-        <li><span>Back-end:</span> Node.js, API REST, Express, Auth (JWT/OAuth)</li>
-        <li><span>Outils:</span> Git/GitHub, VS Code, SEO, Responsive Design</li>
+        <li><span>Back-end:</span> Node.js, REST API, Express, Auth (JWT/OAuth)</li>
+        <li><span>Tools:</span> Git/GitHub, VS Code, SEO, Responsive Design</li>
       </ul>`,
   },
   {
-    title: "Expérience",
+    title: "Experience",
     content: `
       <ul>
-        <li><span>2024:</span> Stagiaire Front-end, Alexandre Martinet (Remote)</li>
+        <li><span>2024:</span> Front-end Intern, Alexandre Martinet (Remote)</li>
         <li><span>2018-2022:</span> Assistant Manager, Bagelstein</li>
       </ul>`,
   },
   {
-    title: "Formation",
+    title: "Education",
     content: `
       <ul>
-        <li><span>2023-2024:</span> Développeur web & Intégrateur, OpenClassrooms</li>
-        <li><span>2016:</span> Bac Pro, Lycée Louis Armand</li>
+        <li><span>2023-2024:</span> Web Developer & Integrator, OpenClassrooms</li>
+        <li><span>2016:</span> Vocational Baccalaureate, Lycée Louis Armand</li>
       </ul>`,
   },
 ];
 
 console.log(tabsData);
 
-// Création containers dynamiques
+// Create dynamic containers
 const container = document.querySelector(".about-col-2");
 const tabTitlesContainer = document.createElement("div");
 tabTitlesContainer.classList.add("tab-titles");
@@ -144,7 +141,7 @@ tabContentsContainer.classList.add("tab-contents-container");
 container.appendChild(tabTitlesContainer);
 container.appendChild(tabContentsContainer);
 
-// Génération des tabs
+// Generate tabs
 tabsData.forEach((tab, idx) => {
   const title = document.createElement("p");
   title.classList.add("tab-links");
