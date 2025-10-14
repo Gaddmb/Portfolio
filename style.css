@@ -204,7 +204,6 @@ nav ul li a:hover:after {
 
 .tab-contents {
   display: none; /* le JS affichera le tab actif */
-  padding: 15px;
   background-color: var(--secondary-bg);
   border-radius: 10px;
   color: var(--text-secondary);
@@ -551,7 +550,7 @@ form textarea {
   }
 
   .about-col-1 {
-    flex-basis: 35%;
+    flex-basis: 25%;
     text-align: left;
   }
 
